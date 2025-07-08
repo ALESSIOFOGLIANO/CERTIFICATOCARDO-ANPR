@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>QR-Control - Verifica Certificati</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 60px;
+        }
+        .barra-blu {
+            background-color: #003366;
+            height: 25px;
+        }
+        .qr-bar {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search input[type="text"] {
+            height: 22px;
+        }
+        .search button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-top: 3px;
+        }
+        .search img {
+            width: 26px;
+            height: 20px;
+        }
+        .container {
+            background: #ffffff;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            border-top: 5px solid #003366;
+        }
+        .title-box {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .success {
+            background-color: #e6ffe6;
+            border: 1px solid #33aa33;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .success::before {
+            content: "✔";
+            color: green;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .info p {
+            margin: 8px 0;
+        }
+        strong {
+            color: #003366;
+        }
+        .button {
+            margin-top: 30px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        button {
+            background-color: white;
+            color: #003366;
+            border: 2px solid #003366;
+            padding: 8px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 20px 40px;
+            border-top: 4px solid #003366;
+            font-size: 0.9em;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        footer li a {
+            text-decoration: none;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo anpr.png" alt="Logo ANPR">
+    <form class="search" role="search">
+        <label for="qry" class="visually-hidden">Cerca:</label>
+        <input id="qry" type="text" name="qry" maxlength="100">
+        <button type="submit">
+            <img src="lente.png" alt="Cerca">
+        </button>
+    </form>
+</header>
+
+<div class="barra-blu"></div>
+<div class="qr-bar">QR-CONTROL</div>
+
+<div class="container">
+    <div class="title-box">Esito verifica qr-code</div>
+    <div class="success">Il certificato richiesto è esistente in ANPR.</div>
+    <div class="info">
+        <p><strong>Protocollo ANPR:</strong> 2441192651</p>
+        <p><strong>Data rilascio:</strong> 08-07-2025</p>
+        <p><strong>Certificato cumulativo:</strong> NO</p>
+        <p><strong>Richiedente:</strong><br>
+           &nbsp;&nbsp;&nbsp;Cognome: CARDO<br>
+           &nbsp;&nbsp;&nbsp;Nome: VITO<br>
+           &nbsp;&nbsp;&nbsp;Codice fiscale: CRDVTI96M14F799X</p>
+    </div>
+</div>
+
+<div class="button">
+    <a href="Dettaglio bonifico.pdf" download style="text-decoration:none;">
+        <button>VISUALIZZA</button>
+    </a>
+</div>
+
+<footer>
+    <ul>
+        <li><a href="#">Note legali</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Accessibilità</a></li>
+    </ul>
+    <img src="logo minisero int.png" height="35" alt="Ministero dell'Interno">
+</footer>
+
+</body>
+</html>
